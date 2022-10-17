@@ -2,7 +2,7 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 import { Check } from 'phosphor-react';
 import { CheckboxProps } from "./types";
 
-export function Checkbox({}: CheckboxProps) {
+export function Checkbox(props: CheckboxProps) {
   return(
     <CheckboxPrimitive.Root
       className="
@@ -12,6 +12,7 @@ export function Checkbox({}: CheckboxProps) {
         bg-gray-800
         rounded
       "
+      {...props}
     >
       <CheckboxPrimitive.Indicator asChild>
         <Check 
